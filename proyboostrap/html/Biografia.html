@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        /* Estilo para ocultar las secciones por defecto */
+        .seccion {
+            display: none; /* Oculta todas las secciones por defecto */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="mostrarSeccion('index.html')">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('Biografia.html')">Biografía</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('carrera')">Carrera</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#" onclick="mostrarSeccion('comidas')">Comidas</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarSeccion('hobbies')">Hobbies</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de contenido -->
+    <div id="contenido">
+        <div id="biografia" class="seccion" style="display: block;">
+            <h1>Biografía</h1>
+            <p>Este es el contenido de la sección de biografía. Aquí puedes incluir información sobre la persona, su historia, logros, etc.</p>
+        </div>
+    </div>
+
+
+    <script>
+        function mostrarSeccion(seccion) {
+            // Ocultar todas las secciones
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(function(sec) {
+                sec.style.display = 'none';
+            });
+
+            // Mostrar la sección seleccionada
+            document.getElementById(seccion).style.display = 'block';
+        }
+    </script>
+<div class="card" style="width: 18rem;">
+    <img src="img/IMG_20240316_095952.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Franco Loza</h5>
+      <p class="card-text">Mi nombre es Franco Loza Quisbert estudiante de 2 do semestre de la carrera de informatica desde mi infancia fue un reto para mi hablar comunicarme con los demas , establecer amistades solidas, con los demas.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div><div class="card" style="width: 18rem;">
+    <img src="img/IMG_20240817_114005.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text">En mi camino tuve que pasar por muchas adversidades, tanto para relacionarme con los demas, como para estar bien conmigo mismo, 
+    por si no saben soy Autista, es una condicion de vida, fue una alegría entrar a la universidad, elegi la carrera porque me gusta el campo de la informatica.
+      </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  
+  </div>
+</body>
+</html>
